@@ -1,18 +1,18 @@
-import { useState } from 'react';
 import './App.css';
+import { BrowserRouter, Route, Routes} from 'react-router-dom'
 // import Welcome from './Welcome';
-
-// function App() {
+import Home from './home';
 
 const App = () =>{
-  const [name, setName] = useState("John");
-  const [gender, setGender] = useState('laki-laki');
   
   return (
-    <div className='card'>
-      {gender === "laki-laki" ? <span>Pak</span> : <span>Buk</span>}
-      <span>{name}</span>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+        </Routes>
+      </BrowserRouter>
+    </>
    
   )
 }
