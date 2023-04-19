@@ -13,17 +13,29 @@ const App = () =>{
   useState(() => {
     axios.get('https://backendexample.sanbercloud.com/api/contestants')
     .then((res) => {
-      console.log(res.data)
+      setData([...res.data])
     })
     .catch((error) => {
 
     })
   },[])
 
-  console.log(data)
+  // console.log(data)
   
   return (
     <>
+    <ul>
+      { data !== null && data.map((res) =>{
+        return(
+          <>
+          <li>
+            {res.name}
+          </li>
+          </>
+        )
+      })}
+      
+    </ul>
     </>
    
   )
