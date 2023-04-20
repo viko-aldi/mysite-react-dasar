@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 const App = () =>{
 
+
   const [data, setData] = useState(null)
 
   useState(() => {
@@ -42,3 +43,35 @@ const App = () =>{
 }
 
 export default App;
+
+
+// import React, { useState} from "react";
+
+// const App = () =>{
+//   const [input, setInput] = useState(
+//     {
+//       name : "",
+//       hobby : ""
+//     }
+//   )
+//   const handleInput = (event) => {
+//     let name = event.target.name
+//     let value = event.target.value
+
+//     if ( name == "name"){
+//       setInput({...input, name : value})
+//     } else if( name === "hobby"){
+//       setInput({...input, value : value})
+//     }
+//   }
+//   return (
+//     <>
+//     <p>Belajar Handling input</p>
+//     <input onChange={handleInput} value={input.name} type="text" name="name"/>
+//     <br/>
+//     <input onChange={handleInput} value={input.hobby} type="text" />
+//     </>
+//   )
+// }
+
+// export default App
