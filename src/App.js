@@ -20,7 +20,6 @@ const [input, setInput] = useState(
 )
 
 //Create form
-
 const handleInput = (event) => {
   let name = event.target.name
   let value = event.target.value
